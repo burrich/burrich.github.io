@@ -1,0 +1,12 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  text-align: right;
+}
+
+.sidebar,
+.sidebar a {
+  color: $color-side-txt;
+}

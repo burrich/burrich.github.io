@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas Jezequel - Développeur Front</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+	<div class="container">
+    <div class="sidebar-container">
+      <div class="sidebar">
+
+        <div class="header">
+          <div class="header-avatar">
+            <img class="header-avatar-img" src="img/avatar-2.jpg" alt="A picture of me">
+          </div>
+
+          <h1 class="header-fullname"><a href="">Nicolas Jezequel</a></h1>
+
+          <p class="header-job">
+            <span class="header-job-1">Développeur</span> <span class="header-job-2">Front end</span>
+          </p>
+          
+          <div class="header-links">
+            <i class="header-link fas fa-circle fa-envelope fa-lg"></i>
+            <i class="header-link fab fa-linkedin-in fa-lg"></i>
+            <i class="header-link fab fa-stack-overflow fa-lg"></i>
+            <i class="header-link fab fa-github fa-lg"></i>
+          </div>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li><a href="">Accueil</a></li>
+            <li class="active"><a href="">Articles</a></li>
+            <li><a href="">A propos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-container">
+        <div class="content-main">
+
+          <div class="content-header">
+            <p class="content-header-p">
+              <strong>Bienvenue sur ma modeste page personnelle !</strong>
+            </p>
+  
+            <p class="content-header-p">
+              <span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">Sass</span>, <span class="tech">React.js</span>… 
+              Voilà pour résumer les technologies sur lesquelles je me concentre et qui me motivent à publier des articles, en tant que passionné par l'écosystème Front.
+            </p>
+  
+            <p class="content-header-p">
+              Je vous renvoie à la section "A propos" si vous souhaitez me découvrir davantage ;)
+            </p>
+          </div>
+
+          <div class="articles">
+            <div class="article">
+              <div class="article-header">
+                
+                <h2 class="article-title">Dernier projet</h2>
+                <div class="article-meta">
+                  <i class="fas fa-sm fa-thumbtack pinned-article-icon" ></i>  07/02/2018
+                </div>
+              </div>
+  
+              <h3>Une application de prise de notes ?</h3>
+  
+              <p>
+                Evernote, OneNote, Google Keep… Le choix ne manque pas en matière d'applications de prise de notes ! Pour ma part, j'utilise régulièrement OneNote après avoir passé un bon moment sur Evernote. L'application me satisfait bien que non exempt de défauts. Malgré cela, j'avais envie de réaliser mon propre outil de prise de notes, avec une volonté de simplicité et d'ergonomie, et comme contrainte l'utilisation du framework React.js.
+              </p>
+  
+              <p>
+                Pourquoi React ? Et bien j'ai dans un premier temps été hypé par ce framework qui jouit d'une certaine popularité depuis un bon moment. J'ai débuté l'aventure des frameworks JavaScript Front avec Angular, dans sa 1ère version. Pas vraiment convaincu par la lourdeur de la mise en place, la surcharge du code HTML et la "magie" du two way data binding, Angular ne m'a pas laissé un grand souvenir. Quelques temps plus tard, j'ai testé succinctement Vue.js, un des tous derniers frameworks JavaScript en vogue, attiré par sa modularité et sa flexibilité. Afin de compléter ma quête du parfait framework JS qui répondrait à mes besoins et à ma philosophie d'approche, j'ai aussi lorgné du côté de React. React s'est vite imposé comme la technologie de 1er choix, tel un bon compromis entre Angular et Vue : flexible de par ses nombreuses approches (trop ?), verbeux mais explicite (one way data binding), mature et populaire.
+              </p>
+  
+              <p>
+                Avec React, j'ai utilisé la bibliothèque Draft.js (Facebook) pour implémenter la partie RTE (Rich Text Editor) et concernant le style, j'ai été voir du côté de Semantic UI. Pour le Backend, j'ai voulu expérimenté MongoDB, ayant toujours travailler sur des bases de données relationnelles, et j'ai choisi Node pour l'API Restful (Express.js). J'ai déjà eu l'occasion d'utiliser Express et c'était l'occasion de partir sur un stack full JavaScript, que rêver de mieux ?
+              </p>
+  
+              <img src="img/note-taking.png">
+  
+              <p>Lien du dépôt : github.com/burrich/note-taking</p>
+            </div>
+  
+            <div class="article">
+              <div class="article-header">
+                <h2 class="article-title">Flex en 2018</h2>
+                <div class="article-meta">09/02/2018</div>
+              </div>
+  
+              <p>
+                Grid se présente comme l'avenir, comme la solution idéale pour l'implémentation de layouts web. Cependant que reste t-il de Flex, faut-il le jeter dans les oubliettes du passé ?<br>
+                Je n'ai pas la prétention de répondre à cette question et peut être même que vous avez du mal à juger de sa pertinence… mais cela me semble un sujet intéressant à aborder. En effet, on peut trouver sur le web de nombreux articles comparant Flex et Grid ou prônant pour le tout Grid.
+              </p>
+              
+              <p>
+                Flex et Grid peuvent aller de paire, Flex pour l'agencement des composants et Grid pour le layout global. En théorie ce serait la solution idéale. Seulement voilà, le support de Grid n'est pas encore optimal notamment pour ce qui est des dernières versions de IE. D'après caniuse.com, Grid est supporté par près de 97% des utilisateurs (France) contre près de 89% pour Flex à l'heure où j'écris cet article.  Aucun problème si vous pouvez vous passer d'IE, mais dans le cas contraire, Flex peut être utilisé de façon similaire à Grid, c’est-à-dire dans l'optique d'un layout global et non uniquement en ciblant des composants. De nombreux frameworks se sont déjà atteler à la tâche : Bulma, Flexbox Grid… Un framework n'est même pas indispensable et peut s'avérer contre productif. Dans ce cas de figure, Solved by Flexbox dispose de nombreuses ressources pour implémenter tout type de layout.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-secondary">
+          <div class="about">
+            <div class="about-header">
+              <h2 class="about-title">A propos</h2>
+            </div>
+  
+            <p>Je suis un développeur Front End de 29 ans basé à Nantes.</p>
+  
+            <p>
+              Après m’être donné du temps pour me recentrer sur le plan personnel et professionnel, j’ai aujourd’hui l’envie et la certitude de mettre mes compétences au service de projets web dynamiques, dans une optique Front End.
+            </p>
+  
+            <p>
+              J'ai toujours eu davantage de sensibilité envers l'aspect visuel et l'ergonomie mais d'un point de vue technologie, le JavaScript avec lequel j'ai fait premières armes m'a toujours rebuté.<br>
+              Cependant, ce langage que j’ai longtemps rejeté me passionne désormais. Ses évolutions technologiques (ECMAscript) et ses approches front, server, mobile et même desktop aujourd’hui avec Electron révolutionnent le monde du développement et sont à titre personnel l'une des source de ma motivation.
+            </p>
+  
+            <p>N'hésitez pas à télécharger mon CV au format pdf.</p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>© 2018 Nicolas Jezequel - powered by npm, gulp and sass</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

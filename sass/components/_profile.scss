@@ -1,0 +1,43 @@
+.header-avatar-img {
+  width: 150px;  
+  border-radius: 2px;
+  opacity: 0.75;
+  filter: sepia(50%);
+}
+
+.header-fullname {
+  margin: 1rem 0 0;
+}
+
+.header-fullname a {
+  color: $color-side-name;
+}
+
+.header-fullname a {
+  text-decoration: none;
+}
+
+.header-job {
+  font-size: 1.4rem;
+  line-height: normal;
+  margin: 0.25rem 0 0;
+  color: $color-side-job;
+}
+
+.header-job-1 {
+  // color: $color-side-job-1;
+}
+
+.header-job-2 {
+  // color: $color-side-job-2;  
+}
+
+.header-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.header-link + .header-link {
+  margin-left: 10px;
+}

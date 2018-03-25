@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+// TODO: move to _sidebar
+.sidebar-container:before {
+  content: "";
+  // display: block;
+  position: fixed;
+  // position: absolute;
+  width: 25vw;
+  height: 100%;
+  background-image: url("img/wong.jpg");
+  background-size: cover;
+  z-index: -1;
+  filter: blur(5px),
+}
+
+.sidebar-container {
+  flex: 1;
+  background: $color-side-bg;
+  // position: relative;
+  // overflow: auto;
+  z-index: 1;
+}
+
+.content-container {
+  flex: 3;
+  overflow: auto;
+  color: $color-gray-30;
+}
