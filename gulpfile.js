@@ -8,11 +8,12 @@ gulp.task('serve', ['sass'], function() {
 	browserSync.init({
 		server: {
 			baseDir: './'
-		}
+		},
+		port: 3100
 	});
 
 	gulp.watch('sass/**/*.scss', ['sass']);
-	gulp.watch('index.html').on('change', browserSync.reload);
+	gulp.watch(['index.html', 'main.js']).on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {

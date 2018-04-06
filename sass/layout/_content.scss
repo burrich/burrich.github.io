@@ -1,9 +1,21 @@
-.content-main {
-  max-width: 70rem;  
-  padding: 2.75rem 5rem 0 5rem;
+.content-main,
+.content-secondary,
+.footer {
+  padding: 1.5rem;
 }
 
 .content-secondary {
-  padding: 1.5rem 5rem 0.5rem 5rem;
   background: $color-gray-90;
+}
+
+@media (min-width: $bp-large) {
+  .content-main,
+  .content-secondary,
+  .footer {
+    padding: 1.5rem 3rem 1.5rem 4rem;
+  }
+
+  .content-main {
+    max-width: 60rem;  
+  }
 }
