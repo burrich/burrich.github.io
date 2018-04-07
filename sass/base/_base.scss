@@ -1,4 +1,4 @@
-$font-stack: ('Quicksand', sans-serif);
+$font-stack: ('Quicksand', sans-serif); // 300, 400, 500, 700
 
 *,
 *:before,
@@ -13,12 +13,7 @@ html {
 body {
   margin: 0;
   font-family: $font-stack;
-  // font-family: 'Arial', sans-serif;
-  // font-family: 'Open Sans', sans-serif;
-  // font-family: 'Roboto', sans-serif;
   // font-family: 'Lato', sans-serif;
-  // font-family: 'Montserrat', sans-serif;
-  // font-family: 'Quicksand', sans-serif;
 }
 
 p,

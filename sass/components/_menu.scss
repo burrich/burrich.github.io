@@ -5,14 +5,13 @@
 @media (min-width: $bp-medium) {
   .menu {
     display: block;
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: -0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     font-weight: 600;
-
 
     ul {
       list-style: none;
@@ -20,7 +19,7 @@
 
     a {
       display: inline-block;
-      padding: 0.1em calc(0.75rem - 3px);
+      padding: 0.2em calc(0.75rem - 3px);
       padding-left: 0;
       border-right: 3px solid transparent;
       text-decoration: none;
