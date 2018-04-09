@@ -37,8 +37,8 @@
 
   .sidebar-container {
     white-space: nowrap; // TODO: move down ?
-    // flex: 0 1 17.0625em; // 273px
     flex: 0;
+    flex-basis: 16.7rem; // ie fix
   }
 
   .content-container {
@@ -48,10 +48,6 @@
 }
 
 @media (min-width: $bp-large) {
-  .sidebar-container:before {
-    width: 25vw;
-  }
-
   .sidebar-container {
     flex: 1;
     background: $color-side-bg;
