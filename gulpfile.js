@@ -30,7 +30,9 @@ gulp.task('sass', function() {
 
 gulp.task('babel', function() {
 	return gulp.src('src/main.js')
+		.pipe(sourcemaps.init())
 		.pipe(babel())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./'));
 });
 
