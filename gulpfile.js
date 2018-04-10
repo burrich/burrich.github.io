@@ -13,13 +13,13 @@ gulp.task('serve', ['sass', 'babel'], function() {
 		port: 3100
 	});
 
-	gulp.watch('sass/**/*.scss', ['sass']);
-	gulp.watch('main.js', ['babel']).on('change', browserSync.reload);
+	gulp.watch('src/sass/**/*.scss', ['sass']);
+	gulp.watch('src/main.js', ['babel']).on('change', browserSync.reload);
 	gulp.watch('index.html').on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
-	return gulp.src('sass/*.scss')
+	return gulp.src('src/sass/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(rename('style.css'))
