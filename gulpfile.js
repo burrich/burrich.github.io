@@ -1,9 +1,10 @@
-const gulp        = require('gulp');
-const sass        = require('gulp-sass');
-const babel       = require('gulp-babel');
-const rename      = require('gulp-rename');
-const sourcemaps  = require('gulp-sourcemaps');
-const browserSync = require('browser-sync').create();
+const gulp         = require('gulp');
+const sass         = require('gulp-sass');
+const babel        = require('gulp-babel');
+const rename       = require('gulp-rename');
+const sourcemaps   = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync  = require('browser-sync').create();
 
 gulp.task('serve', ['sass', 'babel'], function() {
 	browserSync.init({
@@ -23,6 +24,10 @@ gulp.task('sass', function() {
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(rename('style.css'))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./'))
 		.pipe(browserSync.stream());
