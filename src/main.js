@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * NodeList forEach polyfill for ie.
  * TODO: remove this when core-js v3 (babel dependencie) will be available
