@@ -1,2 +1,5 @@
 node_modules
 assets.lnk
+
+# Prod folder : master branch checkout with worktree
+dist 
