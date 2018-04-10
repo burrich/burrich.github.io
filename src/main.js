@@ -4,20 +4,19 @@
  * NodeList forEach polyfill for ie.
  * TODO: remove this when core-js v3 (babel dependencie) will be available
  */
-
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
-    }
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+          callback.call(thisArg, this[i], i, this);
+      }
   };
 }
 
-var menuListItems = document.querySelectorAll('.menu-list-item');
-var menuEntries = ['home', 'articles', 'about'];
+const menuListItems = document.querySelectorAll('.menu-list-item');
+const menuEntries = ['home', 'articles', 'about'];
 
-var activeItemIndex = 0;
+let activeItemIndex = 0;
 
 init();
 
@@ -27,19 +26,17 @@ init();
  * - Add listeners
  */
 function init() {
-  var _this = this;
-
   // Update active item if url hash
-  var urlHash = location.hash.substring(1);
+  const urlHash = location.hash.substring(1);
   if (urlHash && urlHash !== 'home') {
     activeItemIndex = menuEntries.indexOf(urlHash);
-  }
+  } 
 
   addDefaultActiveClass(activeItemIndex);
 
   // Menu items listeners
-  menuListItems.forEach(function (item, index) {
-    item.onclick = updateActiveMenuItem.bind(_this, item, index);
+  menuListItems.forEach((item, index) => {
+    item.onclick = updateActiveMenuItem.bind(this, item, index);
   });
 }
 

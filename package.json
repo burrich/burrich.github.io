@@ -10,12 +10,16 @@
   "author": "burrich",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0"
   },
   "dependencies": {
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-sourcemaps": "^2.6.4",
+    "stackblur-canvas": "^1.4.1"
   }
 }
