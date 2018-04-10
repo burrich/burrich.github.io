@@ -36,6 +36,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: normal;
+}
+
 @media (min-width: $bp-large) {
   html {
     font-size: 1.1em;
