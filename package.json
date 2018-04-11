@@ -5,23 +5,27 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "deploy": "gulp deploy",
+    "build": "gulp build",
+    "build-dist": "gulp dist:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "burrich",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^8.2.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.6",
+    "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
-    "gulp-clean-css": "^3.9.3",
+    "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.2.1"
+    "postcss-uncss": "^0.16.1",
+    "run-sequence": "^2.2.1",
+    "uncss": "^0.16.2"
   },
   "dependencies": {
     "gulp-sourcemaps": "^2.6.4",

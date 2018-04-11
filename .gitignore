@@ -3,9 +3,10 @@ node_modules
 # Raw assets shortcut from dropbox
 assets.lnk
 
-# Generated development files (min files included)
-style*.css
-main*.js
+# Generated development files
+style.css
+main.js
+maps
 
 # Prod folder : master branch checkout with worktree
 dist 
