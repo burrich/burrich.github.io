@@ -4,8 +4,8 @@ node_modules
 assets.lnk
 
 # Generated development files
-style.css
-main.js
+style*.css
+main*.js
 
 # Prod folder : master branch checkout with worktree
 dist 
