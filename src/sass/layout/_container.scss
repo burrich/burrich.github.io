@@ -20,7 +20,7 @@
   color: $color-gray-20;
 
   a {
-    color: inherit;
+    color: $color-content-link;
 
     &:hover {
       text-decoration: underline;
