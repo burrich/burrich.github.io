@@ -25,9 +25,10 @@ const paths = {
 	maps: 'maps'
 };
 
-// TODO: use rename() object argument => .pipe(rename({ extname: '.js' })
+// TODO: convert file to space indent
 // TODO: environment variable
 // TOD0: change tasks names (dist to suffix ?) => build:css
+// TODO: use rename() object argument => .pipe(rename({ extname: '.js' })
 
 gulp.task('default', ['serve']);
 
