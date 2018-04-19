@@ -3,11 +3,14 @@
 
   p {
     line-height: 1.35;
+  }
+  
+  p + p {
     margin-top: 1em;
   }
 
   img {
-    margin-top: 1.5rem;
+    margin: 1.5em 0 1.25em;
     max-width: 100%;
     border-radius: 3px;
   }
@@ -25,15 +28,15 @@
 
 .article-header {
   display: flex;
+  margin-bottom: 1.25em;
 }
 
 .article-header-icon {
   width: 50px;
   height: 50px;
-  border: 1.5px solid #c893657a;
+  border: 1.5px solid $color-content-icon;
   margin: 0 1rem 0 0;
-  background: #d9d6b5;
-  color: #c89365;
+  color: $color-content-icon;
   font-size: 1.5em;
   font-family: 'mvboli';
   font-weight: bold;
@@ -45,17 +48,24 @@
   font-size: 1.5em;
   font-weight: 500;
   margin: 0;  
+  color: hsla(0, 0%, 30%, 1);
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 1px;
 }
 
 .article-meta {
   font-size: 0.8em;
-  font-weight: 500;
-  margin-top: 0;
+  font-size: 0.75em;
+  font-family: 'Lato';
+  font-style: italic;
   letter-spacing: 1px;
+  letter-spacing: 2px;
+  margin: 0 0 0 1px;
 }
 
 .article-subtitle {
-  margin-bottom: 0;
   font-size: 1em;
   font-weight: 500;
+  margin: 0 0 1em;
 }
