@@ -13,9 +13,11 @@
 }
 
 .header-fullname,
-.header-job {
-  padding: 0.1em 0.2em;
+.header-job,
+.header-links {
   background: hsla(0, 0%, 0%, 0.5);
+  padding: 0.1rem 0.3rem;
+  border-radius: 2px;
 }
 
 .header-fullname {
@@ -44,13 +46,13 @@
 }
 
 .header-links {
-  display: flex;
+  position: absolute;
+  right: 1.5rem;
   font-size: 0.8em;
-  margin: 0.35rem 0 0 0.35rem;
 }
 
 .header-link + .header-link {
-  margin-left: 0.5em;
+  margin-left: 0.25em;
 }
 
 @media (min-width: $bp-medium) {
@@ -63,7 +65,9 @@
   }
 
   .header-links {
+    position: static;
     justify-content: flex-end;
-    margin: 0.35rem 0.35rem 0;
+    font-size: 0.75em;
+    margin-top: 0.2em;
   }
 }
