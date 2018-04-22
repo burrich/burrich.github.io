@@ -10,20 +10,14 @@
   }
 
   img {
-    margin: 1.5em 0 1.25em;
+    margin: 1.25em 0;
     max-width: 100%;
     border-radius: 3px;
   }
 }
 
-.article {
-  p {
-    margin-bottom: 0;
-  }
-}
-
 .article + .article {
-  padding-top: 1.5rem;
+  padding-top: 2.25rem;
 }
 
 .article-header {

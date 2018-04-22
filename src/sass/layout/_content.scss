@@ -8,6 +8,15 @@
   background: $color-content-about-bg;
 }
 
+@media (min-width: $bp-medium) {
+  .content-main,
+  .content-secondary,
+  .footer {
+    // padding: 1.5rem 1.75rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
 @media (min-width: $bp-large) {
   .content-main,
   .content-secondary,
