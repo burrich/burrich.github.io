@@ -63,3 +63,9 @@
   font-weight: 500;
   margin: 0 0 1em;
 }
+
+@media (min-width: $bp-medium) {
+  .articles {
+    padding-top: 1.5rem;
+  }
+}
