@@ -5,6 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicolas Jezequel - Développeur Front</title>
 
+  <!-- Favicons -->
+  <!-- (generated from realfavicongenerator.net) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- CSS -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
@@ -24,29 +34,27 @@
 
         <div class="header">
           <div class="header-avatar">
-            <img class="header-avatar-img" src="img/avatar-sepia.jpg" alt="A picture of me">
+            <img class="header-avatar-img" src="img/avatar-sepia.jpg" alt="Ma photo de profil">
           </div>
 
           <h1 class="header-fullname"><a href="">N. Jezequel</a></h1>
 
-          <p class="header-job">
-            <span class="header-job-1">Développeur</span> <span class="header-job-2">web - JS</span>
-          </p>
+          <p class="header-job">Développeur web - JS</p>
           
           <div class="header-links">
-            <a class="header-link" href="mailto:jezequel.n@gmail.com">
+            <a class="header-link" href="mailto:jezequel.n@gmail.com" title="Mail">
               <i class="fas fa-circle fa-envelope"></i>
             </a>
-            <a class="header-link" href="https://www.linkedin.com/in/nicolas-jezequel/">
+            <a class="header-link" href="https://www.linkedin.com/in/nicolas-jezequel/" title="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a class="header-link" href="https://stackoverflow.com/users/2112198/burrich">
+            <a class="header-link" href="https://stackoverflow.com/users/2112198/burrich" title="Stack Overflow">
               <i class="fab fa-stack-overflow"></i>
             </a>
-            <a class="header-link" href="https://github.com/burrich">
+            <a class="header-link" href="https://github.com/burrich" title="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a class="header-link" href="cv.pdf" target="_blank">
+            <a class="header-link" href="cv.pdf" title="CV" target="_blank">
               <i class="fas fa-file"></i>
             </a>
           </div>
@@ -67,34 +75,37 @@
 
           <div class="content-header">
             <p class="content-header-p">
-              <strong>worktree master - Bienvenue sur ma modeste page personnelle !</strong>
+              <strong>Bienvenue sur ma page personnelle ;)</strong>
             </p>
   
             <p class="content-header-p">
-              <span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">Sass</span>, <span class="tech">React.js</span>… 
-              Voilà pour résumer les technologies sur lesquelles je me concentre et qui me motivent à publier des articles, en tant que passionné par l'écosystème Front.
+              <span class="tech">HTML</span>, <span class="tech">CSS</span>, <span class="tech">Sass</span>, <span class="tech">React</span>, <span class="tech">Node</span>… 
+              Voilà pour résumer les technologies sur lesquelles je me concentre et qui me motivent à publier des articles, en tant que passionné par l'écosystème JavaScript.
             </p>
   
             <p class="content-header-p">
-              Je vous renvoie à la section <a href="#about">"A propos"</a> si vous souhaitez me découvrir davantage ;)
+              Je vous renvoie à la section <a href="#about">A propos</a> si vous souhaitez me découvrir davantage.
             </p>
           </div>
 
           <div class="articles" id="articles">
             <div class="article">
               <div class="article-header">
-                
-                <h2 class="article-title">Dernier projet</h2>
-                <div class="article-meta">
-                  <i class="fas fa-sm fa-thumbtack pinned-article-icon" ></i>  
-                  <span class="article-date">07/02/2018</span>
+                <div class="article-header-icon" title="Projet">P</div>
+
+                <div class="article-header-content">
+                  <h2 class="article-title">Dernier projet</h2>
+
+                  <div class="article-meta">
+                    <span class="article-date">02/2018</span>
+                  </div>
                 </div>
               </div>
   
               <h3 class="article-subtitle">Une application de prise de notes</h3>
   
               <p>
-                Evernote, OneNote, Google Keep… Le choix ne manque pas en matière d'applications de prise de notes ! Pour ma part, j'utilise régulièrement OneNote après avoir passé un bon moment sur Evernote. L'application me satisfait bien que non exempt de défauts. Malgré cela, j'avais envie de réaliser mon propre outil de prise de notes, avec une volonté de simplicité et d'ergonomie, et comme contrainte l'utilisation du framework React.js.
+                Evernote, OneNote, Google Keep… Le choix ne manque pas en matière d'applications de prise de notes ! Pour ma part, j'utilise régulièrement <a href="#">OneNote</a> après avoir passé un bon moment sur Evernote. L'application me satisfait bien que non exempt de défauts. Malgré cela, j'avais envie de réaliser mon propre outil de prise de notes, avec une volonté de simplicité et d'ergonomie, et comme contrainte l'utilisation du framework React.js.
               </p>
 
               <p>
@@ -105,7 +116,11 @@
                 Avec React, j'ai utilisé la bibliothèque Draft.js (Facebook) pour implémenter la partie RTE (Rich Text Editor) et concernant le style, j'ai été voir du côté de Semantic UI. Pour le Backend, j'ai voulu expérimenté MongoDB, ayant toujours travailler sur des bases de données relationnelles, et j'ai choisi Node pour l'API Restful (Express.js). J'ai déjà eu l'occasion d'utiliser Express et c'était l'occasion de partir sur un stack full JavaScript, que rêver de mieux ?
               </p>
   
-              <img src="img/note-taking.png">
+              <picture>
+                <source media="(max-width: 1023px)" srcset="img/note-taking-close.png">
+                <source media="(min-width: 1024px)" srcset="img/note-taking.png">
+                <img src="img/note-taking.png" alt="Capture de l'application web Note taking">
+              </picture>
   
               <p>Lien du dépôt : 
                 <a href="github.com/burrich/note-taking">github.com/burrich/note-taking</a>
@@ -114,8 +129,15 @@
   
             <div class="article">
               <div class="article-header">
-                <h2 class="article-title">Flex en 2018</h2>
-                <div class="article-meta">09/02/2018</div>
+                <div class="article-header-icon" title="Flex">F</div>
+
+                <div class="article-header-content">
+                  <h2 class="article-title">Flex en 2018</h2>
+
+                  <div class="article-meta">
+                    <span class="article-date">02/2018</span>
+                  </div>
+                </div>
               </div>
   
               <p>
@@ -133,26 +155,27 @@
         <div class="content-secondary">
           <div class="about" id="about">
             <div class="about-header">
-              <h2 class="about-title">A propos</h2>
+              <!-- <h2 class="about-title">A propos</h2> -->
+              <h2 class="about-title-alt">A propos</h2>
             </div>
   
-            <p>Je suis un développeur Front End de 29 ans basé à Nantes.</p>
+            <p>Je suis un développeur web de 29 ans basé à Nantes.</p>
   
             <p>
-              Après m’être donné du temps pour me recentrer sur le plan personnel et professionnel, j’ai aujourd’hui l’envie et la certitude de mettre mes compétences au service de projets web dynamiques, dans une optique Front End.
+              Après m’être donné du temps pour me recentrer sur le plan personnel et professionnel, j’ai aujourd’hui l’envie et la certitude de mettre mes compétences au service de projets web innovants, dans un environnement JavaScript.
             </p>
   
             <p>
-              J'ai toujours eu davantage de sensibilité envers l'aspect visuel et l'ergonomie mais d'un point de vue technologie, le JavaScript avec lequel j'ai fait premières armes m'a toujours rebuté.<br>
-              Cependant, ce langage que j’ai longtemps rejeté me passionne désormais. Ses évolutions technologiques (ECMAscript) et ses approches front, server, mobile et même desktop aujourd’hui avec Electron révolutionnent le monde du développement et sont à titre personnel l'une des source de ma motivation.
+              Sensible à l'esthétique des sites web, j'attache aussi beaucoup d'importance à l'ergonomie des pages et applications sur lesquelles je travaille.<br>
+              Côté technique, le JavaScript qui autrefois ne m'attirait pas me passionne désormais. Sa flexibilité alliée à ses évolutions technologiques (ECMAscript) et ses approches front, serveur, mobile et même desktop (Electron) révolutionnent le monde du développement. C'est à titre personnel l'une des sources de ma motivation.
             </p>
   
-            <p>N'hésitez pas à <a href="cv.pdf" target="_blank">télécharger mon CV au format pdf</a>.</p>
+            <p>Pour plus d'informations, n'hésitez pas à <a href="cv.pdf" target="_blank">télécharger mon CV au format pdf</a>.</p>
           </div>
         </div>
 
         <div class="footer">
-          <p>© 2018 Nicolas Jezequel - powered by npm, gulp and sass</p>
+          <p>© 2018 Nicolas Jezequel - powered by GitHub Pages</p>
         </div>
     </div>
   </div>
