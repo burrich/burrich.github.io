@@ -20,7 +20,7 @@ const browserSyncPort = 3100;
 
 const paths = {
 	dev: './',
-	prod: 'dist_toRemove',
+	prod: 'dist',
 	src: 'src',
 	maps: 'maps'
 };
@@ -95,7 +95,7 @@ gulp.task('dist:js', function() {
 
 // Copy
 
-gulp.task('copy', ['copy:img'], function() {
+gulp.task('copy', ['copy:img', 'copy:fonts', 'copy:favicons'], function() {
 	return gulp.src(['index.html', 'cv.pdf'])
 		.pipe(gulp.dest(paths.prod));
 });
@@ -104,6 +104,28 @@ gulp.task('copy:img', function() {
 	return gulp.src('img/*')
 		.pipe(gulp.dest(paths.prod + '/img'));
 });
+
+gulp.task('copy:fonts', function() {
+	return gulp.src('fonts/*')
+		.pipe(gulp.dest(paths.prod + '/fonts'));
+});
+
+gulp.task('copy:favicons', function() {
+	return gulp.src([
+			'android-chrome-192x192.png',
+			'android-chrome-512x512.png',
+			'apple-touch-icon.png',
+			'browserconfig.xml',
+			'favicon.ico',
+			'favicon-16x16.png',
+			'favicon-32x32.png',
+			'mstile-150x150.png',
+			'safari-pinned-tab.svg',
+			'site.webmanifest'
+		])
+		.pipe(gulp.dest(paths.prod));
+});
+
 
 // Build
 
