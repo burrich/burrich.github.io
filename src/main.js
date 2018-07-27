@@ -1,5 +1,6 @@
 /**
  * NodeList forEach polyfill for ie.
+ * see https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach#Polyfill
  * TODO: remove this when core-js v3 (babel dependencie) will be available
  */
 if (window.NodeList && !NodeList.prototype.forEach) {
@@ -12,106 +13,67 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 }
 
 /**
- * Wait for DOM loading.
+ * Wait for ressources loading and :
+ * - update active menu item after checking the current hash section
+ * - listen for updates on scroll
+ * 
+ * nb : images must be loaded (load event) to manage scroll events/properties.
  */
-if (document.readyState !== 'loading') {
-  onDocumentReady();
-} else {
-  document.addEventListener('DOMContentLoaded', onDocumentReady);
-}
+window.addEventListener('load', () => {
+  const body         = document.body;
+  const scrollTopMax = body.scrollHeight - body.clientHeight;
+  
+  // Article and about sections top values are rounded (Math.floor) 
+  // in order to match window.scrollY (integer).
 
-function onDocumentReady() {
-  // console.log('document.readyState', document.readyState);
+  const articles     = document.querySelector('#articles');
+  const articlesTop  = Math.floor(articles.getBoundingClientRect().top + window.scrollY);
   
-  const menuListItems = document.querySelectorAll('.menu-list-item');
+  const about        = document.querySelector('#about');
+  const aboutTop     = Math.floor(about.getBoundingClientRect().top + window.scrollY);
   
-  const menuEntries = ['home', 'articles', 'about'];
-  let section = menuEntries[0];
+  const menuItems = document.querySelectorAll('.menu-list-item');
 
-  let activeItemIndex = 0;
-  
-  init();
-  setupScrollEvent();
-  
-  function setupScrollEvent() {
-    const contentContainer = document.querySelector('.content-container');
-    const scrollTopMax     = contentContainer.scrollHeight - contentContainer.clientHeight;
-    const articles         = document.querySelector('#articles');
-    const articlesTop      = articles.getBoundingClientRect().top + window.scrollY;
-    const about            = document.querySelector('#about');
-    const aboutTop         = about.getBoundingClientRect().top + window.scrollY;
-    
-    // const menuEntries = ['home', 'articles', 'about'];
-    // let section = menuEntries[0];
+  let section = ''; 
+  let menuActiveIndex = -1;
 
-    console.log('Before addEvent');
-    window.addEventListener('scroll', (e) => {
-      console.log('scroll', window.scrollY);
-      // console.log('articlesBox.top + window.scrollY', articlesBox.top + window.scrollY);
+  checkHashSections();
+  window.addEventListener('scroll', checkHashSections);
   
-      if (window.scrollY >= Math.floor(aboutTop) ||
-        window.scrollY === scrollTopMax) { // about
-          // console.log('if');
-          if (section !== 'about') {
-            section = menuEntries[2];
-            updateActiveMenuItem(menuListItems[2], 2);
-          }
-      } else if (window.scrollY >= Math.floor(articlesTop)) { // articles
-        // console.log('else if');
-        if (section !== 'articles') {
-          section = menuEntries[1];
-          updateActiveMenuItem(menuListItems[1], 1);
+  /**
+   * Check current hash section and update menu active item if necessary.
+   */
+  function checkHashSections() {
+    if (window.scrollY >= aboutTop || window.scrollY === scrollTopMax) { 
+        // about section
+        if (section !== 'about') {
+          section = 'about';
+          updateMenu(2);
         }
-      } else { // home
-        // console.log('else');
-        if (section !== 'home') {
-          section = menuEntries[0];
-          updateActiveMenuItem(menuListItems[0], 0);
-        }
+    } else if (window.scrollY >= articlesTop) { 
+      // articles section
+      if (section !== 'articles') {
+        section = 'articles';
+        updateMenu(1);
       }
-    });
-  }
-  
-  /**
-   * Init function :
-   * - Add default active class to menu
-   */
-  function init() {
-    const urlHash = location.hash.substring(1); // TODO: rename
- 
-    const articles         = document.querySelector('#articles');
-    const articlesTop      = articles.getBoundingClientRect().top + window.scrollY;
-
-    if (!urlHash || (urlHash === 'home')) {
-      addDefaultActiveClass(activeItemIndex);
-    }
-    if (urlHash && (urlHash === 'articles')) {
-      // section = menuEntries[1];
-      // window.scroll(0, 0);
-    }
-    if (urlHash && (urlHash === 'about')) {
+    } else {
+       // home section
+      if (section !== 'home') {
+        section = 'home';
+        updateMenu(0);
+      }
     }
   }
   
   /**
-   * Add default active class to menu.
+   * Remove current active menu item class and add new.
    */
-  function addDefaultActiveClass(activeItemIndex) {
-    menuListItems[activeItemIndex].classList.add('active');
-  }
-  
-  /**
-   * Remove current active item class and add new
-   * if item clicked is not the current active item.
-   */
-  function updateActiveMenuItem(item, index) {
-    if (index === activeItemIndex) { // useless ? (no jump ?)
-      return;
+  function updateMenu(index) {
+    if (menuActiveIndex !== -1) {
+      menuItems[menuActiveIndex].classList.remove('active');
     }
+    menuActiveIndex = index;
   
-    menuListItems[activeItemIndex].classList.remove('active');
-    activeItemIndex = index;
-  
-    item.classList.add('active');
+    menuItems[index].classList.add('active');
   }
-}
+});
