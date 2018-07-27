@@ -6,6 +6,10 @@ $font-stack: ('Quicksand', sans-serif); // 300, 400, 500, 700
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: $font-stack;
