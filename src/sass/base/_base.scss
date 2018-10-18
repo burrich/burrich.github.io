@@ -35,8 +35,10 @@ a {
   text-decoration: none;
 }
 
-strong {
-  font-weight: normal;
+strong, b {
+  font-size: 0.95em;
+  font-weight: 500;
+  color: $color-content-strong;
 }
 
 @media (min-width: $bp-large) {

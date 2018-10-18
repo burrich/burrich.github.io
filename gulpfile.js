@@ -26,7 +26,7 @@ const paths = {
 };
 
 // TODO: convert file to space indent
-// TODO: environment variable
+// TODO: environment variable & DRY
 // TOD0: change tasks names (dist to suffix ?) => build:css
 // TODO: use rename() object argument => .pipe(rename({ extname: '.js' })
 
