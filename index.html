@@ -79,7 +79,7 @@
 
           <div class="content-header">
             <p class="content-header-p">
-              <b>Bienvenue</b> sur ma page personnelle ;)
+              Bienvenue sur ma page personnelle ;)
             </p>
   
             <p class="content-header-p">
@@ -112,25 +112,33 @@
               <h3 class="article-subtitle">Une application de prise de notes</h3>
   
               <p>
-                Evernote, OneNote, Google Keep… Le choix ne manque pas en matière d'applications de prise de notes ! Pour ma part, j'utilise régulièrement <a href="#">OneNote</a> après avoir passé un bon moment sur Evernote. L'application me satisfait bien que non exempt de défauts. Malgré cela, j'avais envie de réaliser mon propre outil de prise de notes, avec une volonté de simplicité et d'ergonomie, et comme contrainte l'utilisation du framework React.js.
+                Evernote, OneNote, Google Keep… Le choix ne manque pas en matière d'applications de prise de notes. Pour ma part, je suis passé de Evernote à OneNote, davantage satisfait par ce dernier pour son ergonomie et son interface plus riche. Malgré toutes ses qualités, j'avais envie de réaliser <b>mon propre outil de prise de notes open source</b>, avec une volonté de <b>simplicité</b> et d'<b>ergonomie</b>, et comme contrainte l'utilisation du framework <a href="https://reactjs.org/">React.js</a> dans un environnement <a href="https://nodejs.org/en/">Node.js</a>.
               </p>
 
               <p>
-                Pourquoi React ? Et bien j'ai dans un premier temps été hypé par ce framework qui jouit d'une certaine popularité depuis un bon moment. J'ai débuté l'aventure des frameworks JavaScript Front avec Angular, dans sa 1ère version. Pas vraiment convaincu par la lourdeur de la mise en place, la surcharge du code HTML et la "magie" du two way data binding, Angular ne m'a pas laissé un grand souvenir. Quelques temps plus tard, j'ai testé succinctement Vue.js, un des tous derniers frameworks JavaScript en vogue, attiré par sa modularité et sa flexibilité. Afin de compléter ma quête du parfait framework JS qui répondrait à mes besoins et à ma philosophie d'approche, j'ai aussi lorgné du côté de React. React s'est vite imposé comme la technologie de 1er choix, tel un bon compromis entre Angular et Vue : flexible de par ses nombreuses approches (trop ?), verbeux mais explicite (one way data binding), mature et populaire.
+                <b>Pourquoi React ?</b> Et bien j'ai dans un premier temps été attiré par ce framework qui jouit d'une certaine popularité dans la jungle des nombreux frameworks JS, et ce depuis un bon moment déjà. J'ai débuté l'aventure des frameworks JavaScript Front avec Angular, dans sa 1ère version. Pas vraiment convaincu par la lourdeur de la mise en place, la surcharge du code HTML et la "magie" du two way data binding, Angular ne m'a pas laissé un grand souvenir. Quelques temps plus tard, j'ai testé succinctement Vue.js, un des tous derniers frameworks JavaScript en vogue, attiré par sa modularité et sa flexibilité. Afin de compléter ma quête du framework front-end qui répondrait à mes besoins et à ma philosophie d'approche, j'ai aussi lorgné du côté de React. React s'est vite imposé tel <b>un bon compromis entre Angular et Vue</b> : flexible et très permissif de par ses nombreuses approches (trop ?), verbeux mais explicite (one way data binding), mature et rassemblant une grand communauté.
               </p>
   
               <p>
-                Avec React, j'ai utilisé la bibliothèque Draft.js (Facebook) pour implémenter la partie RTE (Rich Text Editor) et concernant le style, j'ai été voir du côté de Semantic UI. Pour le Backend, j'ai voulu expérimenté MongoDB, ayant toujours travailler sur des bases de données relationnelles, et j'ai choisi Node pour l'API Restful (Express.js). J'ai déjà eu l'occasion d'utiliser Express et c'était l'occasion de partir sur un stack full JavaScript, que rêver de mieux ?
+                Avec React, j'ai utilisé la bibliothèque <a href="https://draftjs.org/">Draft.js</a> (Facebook) pour implémenter la partie RTE (Rich Text Editor) et concernant le style, j'ai été voir du côté de <a href="https://react.semantic-ui.com/">Semantic UI</a>. Pour le Backend, j'ai voulu expérimenté <b>MongoDB</b>, ayant toujours travaillé sur des bases de données relationnelles, et j'ai choisi Node pour l'API Restful (<b>Express.js</b>). J'ai déjà eu l'occasion d'utiliser Express, c'était donc l'occasion de partir sur un stack full JavaScript.
               </p>
-  
+
               <picture>
                 <source media="(max-width: 1023px)" srcset="img/note-taking-close.png">
                 <source media="(min-width: 1024px)" srcset="img/note-taking.png">
                 <img src="img/note-taking.png" alt="Capture de l'application web Note taking">
               </picture>
-  
-              <p>Lien du dépôt : 
+                  
+              <p>
+                Une <b>démo</b> "client-side only" est accessible sur heroku, les données sont gérées avec <a href="http://dexie.org/">Dexie.js</a> (wrapper IndexedDB). La requête au site peut durer quelques secondes (hebergement provisoire).
+              </p>
+
+              <p>
+                Démo : 
+                <a href="https://note-taking-demo.herokuapp.com">note-taking-demo.herokuapp.com</a><br>
+                Lien du dépôt : 
                 <a href="github.com/burrich/note-taking">github.com/burrich/note-taking</a>
+
               </p>
             </div>
   
@@ -139,7 +147,7 @@
                 <div class="article-header-icon" title="Flex">F</div>
 
                 <div class="article-header-content">
-                  <h2 class="article-title">Flex en 2018</h2>
+                  <h2 class="article-title">Flex et Grid (CSS)</h2>
 
                   <div class="article-meta">
                     <span class="article-date">02/2018</span>
@@ -147,13 +155,17 @@
                 </div>
               </div>
   
+              <p class="update">
+                <span class="update-heading">Mise à jour d'octobre 2018 :</span> le support des dernières versions d'IE s'est grandement amélioré concernant Grid.<br>  
+                <a href="https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/">>>> css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer</a>
+              </p>
+
               <p>
-                Grid se présente comme l'avenir, comme la solution idéale pour l'implémentation de layouts web. Cependant que reste t-il de Flex, faut-il le jeter dans les oubliettes du passé ?<br>
-                Je n'ai pas la prétention de répondre à cette question et peut être même que vous avez du mal à juger de sa pertinence… mais cela me semble un sujet intéressant à aborder. En effet, on peut trouver sur le web de nombreux articles comparant Flex et Grid ou prônant pour le tout Grid.
+                Flex, ou Flexbox, est un module CSS de mise en page qui fait l'unanimité dans la communauté front, avec la condition d'oublier le support des navigateurs Internet Explorer inférieurs à la 10ème version. Son "successeur", CSS Grid, se présente aujourd'hui comme la solution la plus avancée pour implémenter des layouts web. <strong>Mais faut-il pour autant se passer de Flex</strong>, qui répond déjà à la majorité des besoins d'agencement <b>?</b> Je n'ai pas la prétention de répondre à cette question et peut être même que vous avez du mal à juger de sa pertinence, mais cela me semble un sujet intéressant à aborder. En effet, on peut trouver sur le web de nombreux articles comparant Flex et Grid ou prônant pour le tout Grid.
               </p>
               
               <p>
-                Flex et Grid peuvent aller de paire, Flex pour l'agencement des composants et Grid pour le layout global. En théorie ce serait la solution idéale. Seulement voilà, le support de Grid n'est pas encore optimal notamment pour ce qui est des dernières versions de IE. D'après caniuse.com, Grid est supporté par près de 97% des utilisateurs (France) contre près de 89% pour Flex à l'heure où j'écris cet article.  Aucun problème si vous pouvez vous passer d'IE, mais dans le cas contraire, Flex peut être utilisé de façon similaire à Grid, c’est-à-dire dans l'optique d'un layout global et non uniquement en ciblant des composants. De nombreux frameworks se sont déjà atteler à la tâche : Bulma, Flexbox Grid… Un framework n'est même pas indispensable et peut s'avérer contre productif. Dans ce cas de figure, Solved by Flexbox dispose de nombreuses ressources pour implémenter tout type de layout.
+                Il faut tout d'abord savoir que <strong>Flex et Grid peuvent très bien aller de paire</strong>, Flex pour l'agencement des composants et Grid pour le layout global. En théorie ce serait la solution idéale. Seulement voilà, le support de Grid n'est pas encore optimal, notamment pour ce qui est des dernières versions de IE. Aucun problème si vous pouvez vous passer d'IE, mais dans le cas contraire, Flex peut être utilisé de façon similaire à Grid, c’est-à-dire dans l'optique d'un layout global et non uniquement en ciblant des composants. De nombreux frameworks se sont déjà attelés à la tâche : Bulma, Flexbox Grid… Un framework n'est même pas indispensable et peut s'avérer contre productif. Dans ce cas de figure, <a href="https://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> dispose de nombreuses ressources pour implémenter tout type de layout.
               </p>
             </div>
           </div>
