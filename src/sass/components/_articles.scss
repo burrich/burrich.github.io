@@ -9,6 +9,16 @@
     margin-top: 1em;
   }
 
+  .update {
+    font-size: 0.95em;
+    font-style: italic;
+    margin-left: 65px;
+
+    .update-heading {
+      border-bottom: 1px dotted;
+    }
+  }
+
   img {
     margin: 1.25em 0;
     max-width: 100%;
